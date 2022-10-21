@@ -1,0 +1,20 @@
+@import "../../styles/styles.css";
+
+.card_container {
+    min-height: 60vh;
+    width: 75vw;
+    margin: 30px 0;
+    border-radius: 50px;
+    background-color: var(--dark-primary-color);
+    display: flex;
+    justify-content: space-between;
+    /*position: relative;*/
+}
+
+.card_container.dark {
+    background-color: var(--dark-primary-color);
+}
+
+.card_container.light {
+    background-color: var(--light-primary-color);
+}

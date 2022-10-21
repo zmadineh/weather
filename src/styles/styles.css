@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-primary-color: #222831;
+    --dark-secondary-color: #222831;
+    --light-primary-color: #b0c5ff;
+    --light-secondary-color: #c3d6ff;
+    --tertiary-color: #5667E7;
+    --quaternary-color: #71E9F2;
+    --dark-text-primary: #FFFFFF;
+    --light-text-primary: #181818;
+    /*--hoverColor: #49beb680;*/
+    --dark-background-color: #333C4A;
+    --light-background-color: #f7f9fd;
+}
