@@ -12,10 +12,10 @@ import currentDayForecast from "../../helper/getCurrentDayDetailedForcast";
 import clsx from "clsx";
 import {fetchWeatherForecastAsync} from "../../toolkit/slices/weather_forecast.slice";
 import {getCurrentDay} from "../../helper/getCurrentDay";
-import {Link, NavLink} from "react-router-dom";
 import Header from "../../component/header/Header";
+import {units} from "../../data/units";
 
-const HomePage= ({ theme, setTheme }) => {
+const HomePage= ({ theme, setTheme, lang, setLang }) => {
 
 
     const isReceived = useSelector((state) => state.weather.isReceived);
@@ -29,7 +29,6 @@ const HomePage= ({ theme, setTheme }) => {
     const dispatch = useDispatch();
 
     const [location, setLocation] = useState('iran');
-    const [lang, setLang] = useState('fa'); // fa / en
     const [unit, setUnit] = useState('metric'); // standard (K) / imperial (F) / metric (C)
 
     const {current_day_word, current_day_num, current_month} = getCurrentDay();
@@ -45,7 +44,8 @@ const HomePage= ({ theme, setTheme }) => {
     return (
         <div>
             <Layout theme={theme}>
-                <Header setTheme={setTheme} lang={lang} setLang={setLang} setLocation={setLocation} searchLocation={searchLocation} />
+                <Header theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} setLocation={setLocation} searchLocation={searchLocation} home={true} />
+                {isReceived ?
                 <Card theme={theme}>
                     <MainCardItem theme={theme}>
                         <div className={clsx('text_container', lang==='fa' && 'rtl_col', lang==='en' && 'ltr_col')}>
@@ -58,7 +58,7 @@ const HomePage= ({ theme, setTheme }) => {
                         </div>
 
                         <div className={clsx('text_container', lang==='fa' && 'rtl_col', lang==='en' && 'ltr_col')}>
-                            <h2>{isReceived ? data[lang].main.temp : null} °C</h2>
+                            <h2>{isReceived ? data[lang].main.temp : null} {units[unit]}</h2>
                             <p>{isReceived ? data[lang].weather[0].description : null}</p>
                         </div>
                     </MainCardItem>
@@ -74,7 +74,7 @@ const HomePage= ({ theme, setTheme }) => {
                         </ContentBox>
 
                         {isReceived && forecastData_isReceived ?
-                        <ContentBox className={'forecast_box'}>
+                        <ContentBox theme={theme} className={'forecast_box'}>
                             {forecastData[lang].map(fdata =>
                                 <CardItem key={fdata.dt_txt} data={fdata} day_index={fdata.day_index} icon={fdata.weather[0].icon} unit={unit} lang={lang} expand={false}/>
                             )}
@@ -82,6 +82,9 @@ const HomePage= ({ theme, setTheme }) => {
                         : null}
                     </div>
                 </Card>
+                    :
+                 <div>{loading ? '...loading' : null }</div>
+                }
             </Layout>
         </div>
     );

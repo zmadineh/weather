@@ -7,10 +7,11 @@ import {fetchWeatherAsync} from "../../toolkit/slices/weather.slice";
 import {fetchWeatherForecastAsync} from "../../toolkit/slices/weather_forecast.slice";
 import {useParams} from "react-router-dom";
 import Layout from "../../component/layout/Layout";
+import Header from "../../component/header/Header";
 
-const ForecastPage = ({ theme }) => {
+const ForecastPage = ({ theme, setTheme, lang, setLang }) => {
 
-    const {lang, unit} = useParams();
+    const {unit} = useParams();
 
     const isReceived = useSelector((state) => state.weather.isReceived);
 
@@ -29,10 +30,11 @@ const ForecastPage = ({ theme }) => {
     return (
 
             <Layout theme={theme}>
+                <Header theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} home={false} />
             {isReceived && forecastData_isReceived ?
-                <ContentBox className={'large-forecast_box'}>
+                <ContentBox theme={theme} className={'large-forecast_box'}>
                     {forecastData[lang].map(fdata =>
-                        <CardItem key={fdata.dt_txt} data={fdata} day_index={fdata.day_index} icon={fdata.weather[0].icon} unit={'°C'} expand={true}/>
+                        <CardItem key={fdata.dt_txt} data={fdata} day_index={fdata.day_index} icon={fdata.weather[0].icon} unit={unit} expand={true} lang={lang}/>
                     )}
                 </ContentBox>
                 : null}

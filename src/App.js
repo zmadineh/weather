@@ -12,15 +12,16 @@ import ForecastPage from "./pages/forecast/forecastPage";
 function App () {
 
   const [theme, setTheme] = useState('dark')
+  const [lang, setLang] = useState('fa'); // fa / en
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage theme={theme} setTheme={setTheme}/>,
+      element: <HomePage theme={theme} setTheme={setTheme} lang={lang} setLang={setLang}/>,
     },
     {
       path: "/forecast/:lang/:unit",
-      element: <ForecastPage theme={theme}/>,
+      element: <ForecastPage theme={theme} setTheme={setTheme} lang={lang} setLang={setLang}/>,
     },
   ]);
 

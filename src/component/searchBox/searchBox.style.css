@@ -1,19 +1,11 @@
 @import "../../styles/styles.css";
 
 .searchBox_container {
-    /*background-color: #fff;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*!*gap: 10px;*!*/
-    padding: 5px 10px;
-    margin: 10px 0;
-    /*height: 30px;*/
-    /*border-radius: 30px;*/
+    padding: 0 10px;
     color: var(--dark-text-primary);
 }
 
 .searchBox_container.light {
-    border: 1px solid var(--dark-primary-color);
     color: var(--light-text-primary);
 }
 
@@ -30,7 +22,14 @@
 
 .select_box {
     color: var(--light-text-primary);
-    min-width: 200px;
+    min-width: 100px;
     width: 100%;
     padding: 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .searchBox_container {
+        margin-top: 40px;
+    }
 }

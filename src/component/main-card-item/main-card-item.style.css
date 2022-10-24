@@ -4,7 +4,7 @@
     border-radius: 50px;
     /*flex: 50%;*/
     height: 100%;
-    width: 35%; /* for desktop only */
+    width: 100%;
     min-height: 60vh;
     max-width: 500px;
     background-image: url("../../assets/mountain.jpg");
@@ -42,4 +42,25 @@
     justify-content: space-between;
     height: 80%;
     width: 80%;
+}
+
+@media only screen and (min-width: 527px) {
+
+}
+
+@media only screen and (min-width: 625px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+    .MainCardItem_container {
+        width: 40%;
+        /*min-height: 60vh;*/
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .MainCardItem_container {
+        width: 35%;
+    }
 }

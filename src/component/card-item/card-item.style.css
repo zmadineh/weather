@@ -1,8 +1,12 @@
 @import "../../styles/styles.css";
 
+.d-none {
+    display: none;
+}
+
 .navLink {
     text-decoration: none;
-    color: #fff;
+    color: inherit;
 }
 
 .card-item_container {
@@ -19,10 +23,13 @@
 .expand_card_item {
     border-radius: 30px;
     border: 1px solid var(--quaternary-color);
-    box-shadow: 0 4px 4px 0 #71E9F23D, 0 6px 20px 0 #71E9F23D;
     padding: 30px;
-    width: 150px;
-    height: 400px;
+    max-width: 150px;
+    max-height: 400px;
+}
+
+.expand_card_item:hover {
+    box-shadow: 0 4px 4px 0 #71E9F23D, 0 6px 20px 0 #71E9F23D;
 }
 
 .card_image {
@@ -33,4 +40,26 @@
 .expand_card_image {
     width: 100px;
     height: 100px;
+}
+
+.card_temp_item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.max_temp_icon {
+    color: #00ebff;
+}
+
+.min_temp_icon {
+    color: #ff002f;
+}
+
+@media only screen and (min-width: 527px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+
 }

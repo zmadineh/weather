@@ -2,16 +2,69 @@
 .header_container {
     display: flex;
     justify-content: center;
+    color: #000;
+    z-index: 1000;
+    height: 150px;
 }
 
-.theme_btn_container {
+.btn_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     position: fixed;
     left: 30px;
     top: 30px;
 }
 
-.lang_btn_container {
+.link_container {
     position: fixed;
     right: 30px;
     top: 30px;
+}
+
+.search_container {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    width: 160px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.link_container.light {
+    color: #000;
+}
+
+.link_container.dark {
+    color: #fff;
+}
+
+.d-none {
+    display: none;
+}
+
+.select-width {
+    max-width: 100px;
+}
+
+
+@media only screen and (min-width: 450px) {
+    .search_container {
+        width: unset;
+        min-width: 200px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .search_container {
+        position: sticky;
+        top: 0;
+    }
+
+    .btn_container {
+        flex-direction: row;
+    }
 }

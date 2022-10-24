@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 65%;
+    width: 100%;
     min-height: 60vh;
 }
 
@@ -44,4 +44,30 @@
 
 .ltr_col {
     align-items: flex-start;
+}
+
+@media only screen and (min-width: 527px) {
+
+}
+
+@media only screen and (min-width: 625px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+    .home_content {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .home_content {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .home_content {
+        width: 70%;
+    }
 }

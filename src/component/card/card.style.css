@@ -2,12 +2,14 @@
 
 .card_container {
     min-height: 60vh;
-    width: 75vw;
+    max-width: 75vw;
     margin: 30px 0;
     border-radius: 50px;
     background-color: var(--dark-primary-color);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
     /*position: relative;*/
 }
 
@@ -17,4 +19,32 @@
 
 .card_container.light {
     background-color: var(--light-primary-color);
+}
+
+@media only screen and (min-width: 527px) {
+    .card_container {
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 625px) {
+    .card_container {
+        max-width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .card_container {
+        width: 90%;
+        max-width: 90vw;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .card_container {
+        width: 70%;
+        max-width: 70vw;
+        flex-direction: row;
+    }
 }
