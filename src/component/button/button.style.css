@@ -1,12 +1,18 @@
 @import "../../styles/styles.css";
 
+.button_container {
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
 .button {
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     height: 35px;
-    margin: 10px;
+    min-width: 200px;
     width: 100%;
     background: linear-gradient(to left, var(--tertiary-color), var(--quaternary-color));
     color: #fff;
     font-size: 18px;
+    cursor: pointer;
 }

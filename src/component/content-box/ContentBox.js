@@ -1,11 +1,13 @@
 import React from "react";
 import './content-box.css';
 
-const ContentBox = ({theme, children}) => {
+const ContentBox = ({theme, children, className = 'content_box'}) => {
     return (
-        <div className={'content_container'}>
-            {children}
-        </div>
+
+            <div className={className}>
+                {children}
+            </div>
+
     )
 }
 

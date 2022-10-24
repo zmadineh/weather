@@ -2,14 +2,17 @@
 
 .MainCardItem_container {
     border-radius: 50px;
+    /*flex: 50%;*/
     height: 100%;
-    width: 100%;
+    width: 35%; /* for desktop only */
     min-height: 60vh;
-    max-width: 400px;
+    max-width: 500px;
     background-image: url("../../assets/mountain.jpg");
     z-index: 10;
-    /*padding: 30px;*/
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .MainCardItem_container.dark {
@@ -28,14 +31,15 @@
     background: linear-gradient(to left, var(--tertiary-color), var(--quaternary-color));
     width: 100%;
     height: 100%;
-    /*padding: 30px;*/
 }
 
 .mainCardContent_container {
     position: absolute;
     color: var(--dark-text-primary);
     z-index: 20;
-    padding: 40px;
-    /*font-size: 100px;*/
-    /*background-color: #fff;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 80%;
 }

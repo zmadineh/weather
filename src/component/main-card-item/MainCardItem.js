@@ -1,6 +1,5 @@
 import React from "react";
 import './main-card-item.style.css';
-import mountain_img from '../../assets/mountain.jpg';
 import clsx from "clsx";
 
 const MainCardItem = ({theme, children}) => {
@@ -9,7 +8,7 @@ const MainCardItem = ({theme, children}) => {
             <div className={'mainCard_overlay'}></div>
 
             <div className={'mainCardContent_container'}>
-                {children}
+                { children }
             </div>
 
         </div>

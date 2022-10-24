@@ -1,32 +1,32 @@
 const currentDayForecast = data => [
     {
-        name: 'predictability',
-        value: data.predictability,
+        name: {en: 'feels like', fa: 'احساس واقعی'},
+        value: data.main.feels_like,
         unit: '%',
     },
     {
-        name: 'humidity',
-        value: data.humidity,
+        name: {en: 'humidity', fa: 'رطوبت'},
+        value: data.main.humidity,
         unit: '%',
     },
     {
-        name: 'wind',
-        value: Math.round(data.wind_speed),
-        unit: 'km/h',
+        name: {en: 'wind speed', fa: 'سرعت باد'},
+        value: Math.round(data.wind.speed),
+        unit: 'm/s',
     },
     {
-        name: 'air pressure',
-        value: data.air_pressure,
-        unit: 'mb',
+        name: {en: 'air pressure', fa: 'فشار هوا'},
+        value: data.main.pressure,
+        unit: 'hPa',
     },
     {
-        name: 'max temp',
-        value: Math.round(data.max_temp),
+        name: {en:'max temp', fa: 'بیشترین دما'},
+        value: Math.round(data.main.temp_max),
         unit: '°C',
     },
     {
-        name: 'min temp',
-        value: Math.round(data.min_temp),
+        name: {en: 'min temp', fa: 'کمترین دما'},
+        value: Math.round(data.main.temp_min),
         unit: '°C',
     },
 ];

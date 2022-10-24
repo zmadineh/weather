@@ -1,0 +1,17 @@
+
+.header_container {
+    display: flex;
+    justify-content: center;
+}
+
+.theme_btn_container {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+}
+
+.lang_btn_container {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+}

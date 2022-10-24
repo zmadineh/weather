@@ -20,9 +20,3 @@
     background-color: var(--light-background-color);
     color: var(--light-text-primary);
 }
-
-.theme_btn_container {
-    position: fixed;
-    left: 30px;
-    top: 30px;
-}

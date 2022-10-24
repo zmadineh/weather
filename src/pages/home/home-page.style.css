@@ -1,0 +1,47 @@
+
+.home_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 65%;
+    min-height: 60vh;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.current-loc_p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.content_rows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rtl_row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ltr_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.rtl_col {
+    align-items: flex-end;
+}
+
+.ltr_col {
+    align-items: flex-start;
+}
