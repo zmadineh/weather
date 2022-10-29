@@ -2,7 +2,7 @@ const currentDayForecast = data => [
     {
         name: {en: 'feels like', fa: 'احساس واقعی'},
         value: data.main.feels_like,
-        unit: '%',
+        unit: '°C',
     },
     {
         name: {en: 'humidity', fa: 'رطوبت'},
